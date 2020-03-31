@@ -36,7 +36,7 @@ exports.new = function(req, res) {
     //handles null error 
      if(!new_contact.name || !new_contact.email || !new_contact.phone || !new_contact.gender){
               res.status(400).send({ error:true, message: 'Please provide more info' });
-          }
+    }
      else{
         Contact.createContact(new_contact, function(err, task) { 
             if (err)
